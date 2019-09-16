@@ -1,0 +1,33 @@
+/*
+  nth-1:\/:nth-2
+*/
+.icon-check {
+  stroke: #000;
+  fill: transparent;
+  stroke-width: 2px;
+  &.anim-1 {
+    svg {
+      g:first-child {
+        path {
+          transition: all 0.3s ease-in-out;
+          stroke-dasharray: 26;
+          stroke-dashoffset: 80;
+        }
+      }
+    }
+  }
+}
+
+&.active {
+  .icon-check {
+    &.anim-1 {
+      svg {
+        g:first-child {
+          path {
+            stroke-dasharray: 36;
+          }
+        }
+      }
+    }
+  }
+}

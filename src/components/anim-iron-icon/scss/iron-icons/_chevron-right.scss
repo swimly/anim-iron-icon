@@ -1,0 +1,12 @@
+&:hover,
+&.active {
+  .icon-chevron-right {
+    &.anim-1 {
+      svg {
+        path {
+          transform: translate(4px);
+        }
+      }
+    }
+  }
+}

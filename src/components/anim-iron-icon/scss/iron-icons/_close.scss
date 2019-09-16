@@ -1,0 +1,82 @@
+/*
+nth-4:\/:nth-1
+nth-3:/\:nth-2
+*/
+
+.icon-close {
+  &.anim-3 {
+    svg {
+      g:first-child {
+        path {
+          opacity: 1;
+          &:nth-child(1) {
+            transform-origin: center;
+          }
+          &:nth-child(2) {
+            transform-origin: center;
+          }
+          &:nth-child(3) {
+            transform-origin: center;
+          }
+          &:nth-child(4) {
+            transform-origin: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+&:hover,
+&.active {
+  .icon-close {
+    &.anim-1 {
+      svg {
+        g:first-child {
+          path {
+            opacity: 1;
+            &:nth-child(1) {
+              transform: translate(-14%);
+            }
+            &:nth-child(2) {
+              transform: translate(-14%);
+            }
+            &:nth-child(3) {
+              transform: translate(20%, -35%);
+              opacity: 0;
+            }
+            &:nth-child(4) {
+              transform: translate(30%, 50%) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    &.anim-2 {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+    &.anim-3 {
+      svg {
+        g:first-child {
+          path {
+            opacity: 1;
+            &:nth-child(1) {
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              transform: rotate(135deg);
+            }
+            &:nth-child(3) {
+              transform: rotate(45deg);
+            }
+            &:nth-child(4) {
+              transform: rotate(135deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+&.active {
+  .icon-play-arrow {
+    &.anim-1 {
+      svg,
+      .item-bg {
+        transform: scale(1, 1);
+        opacity: 1;
+      }
+      svg {
+        transition: all 0.3s ease-in-out 0.1s;
+      }
+      .item-bg {
+        transition: all 0.3s ease-in-out 0s;
+      }
+    }
+  }
+}
+
+.icon-play-arrow {
+  &.anim-1 {
+    svg,
+    .item-bg {
+      transform: scale(0, 0);
+      opacity: 0;
+    }
+    svg {
+      transition: all 0.3s ease-in-out 0s;
+    }
+    .item-bg {
+      transition: all 0.3s ease-in-out 0.1s;
+    }
+  }
+}

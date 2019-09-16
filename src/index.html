@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Animated google material icons</title>
+
+    <script type="module" src="/build/anim-iron-icon.esm.js"></script>
+    <script nomodule src="/build/anim-iron-icon.js"></script>
+  </head>
+  <style>
+    * {
+      font-family: 'Roboto', sans-serif;
+      outline: none;
+      box-sizing: border-box;
+    }
+    h4 {
+      width: 100px;
+    }
+    body {
+      display: flex;
+      width: 100vw;
+    }
+    section {
+      width: 100%;
+      padding: 40px;
+    }
+    .icons-container {
+      padding: 20px 40px;
+    }
+    .icons-list {
+      display: flex;
+    }
+    .icons-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 10%;
+    }
+    @keyframes fade {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0.25;
+      }
+    }
+  </style>
+  <script>
+    function toggleHidden(target, position) {
+      document.querySelectorAll(target)[position].classList.toggle('hidden')
+    }
+    function toggleActive(position) {
+      document.querySelectorAll('anim-iron-icon')[position].classList.toggle('active')
+    }
+  </script>
+  <body>
+    <section>
+      <h1>Early Alpha</h1>
+      <p>
+        Implement
+        <a href="https://www.webcomponents.org/element/@polymer/iron-icons"
+          ><strong>google polymer icons</strong></a
+        >
+        with animation
+      </p>
+      <p>
+        <strong>Every icons</strong> which haven't yet any animation <strong>are</strong> still
+        <strong>usable</strong> ,
+        <a href="https://www.webcomponents.org/element/@polymer/iron-icons/demo/demo/index.html">
+          you'll find everything here
+        </a>
+      </p>
+      <h3>How it's work?</h3>
+      <p class="description">
+        juste write &lt;anim-iron-icon icon="icons:close" animation="anim-1" class="md-36"
+        circle="anim-1">&lt;/anim-iron-icon>
+      </p>
+      <h2>Animation</h2>
+      <p class="description"></p>
+      <div class="icons-container">
+        <div class="icons-list">
+          <h4>Circle</h4>
+          <div class="icons-item" onclick="toggleActive(0)">
+            <anim-iron-icon class="md-36 active" circle="anim-1"></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+          <div class="icons-item" onclick="toggleActive(1)">
+            <anim-iron-icon class="md-36 active" circle="anim-2"></anim-iron-icon>
+            <p>
+              anim-2
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2>Icons</h2>
+      <div class="icons-container">
+        <div class="icons-list">
+          <h4>spinner</h4>
+          <div class="icons-item">
+            <anim-iron-icon
+              icon="icons:spinner"
+              animation="anim-1"
+              class="md-36 inner-black"
+            ></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+        </div>
+        <div class="icons-list">
+          <h4>close</h4>
+          <div class="icons-item">
+            <anim-iron-icon icon="icons:close" animation="anim-1" class="md-36"></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+          <div class="icons-item">
+            <anim-iron-icon icon="icons:close" animation="anim-2" class="md-36"></anim-iron-icon>
+            <p>
+              anim-2
+            </p>
+          </div>
+          <div class="icons-item">
+            <anim-iron-icon icon="icons:close" animation="anim-3" class="md-36"></anim-iron-icon>
+            <p>
+              anim-3
+            </p>
+          </div>
+        </div>
+        <div class="icons-list">
+          <h4>chevron-left</h4>
+          <div class="icons-item">
+            <anim-iron-icon
+              icon="icons:chevron-left"
+              animation="anim-1"
+              class="md-36"
+            ></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+        </div>
+        <div class="icons-list">
+          <h4>chevron-right</h4>
+          <div class="icons-item">
+            <anim-iron-icon
+              icon="icons:chevron-right"
+              animation="anim-1"
+              class="md-36"
+            ></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+        </div>
+        <div class="icons-list">
+          <h4>check</h4>
+          <div class="icons-item" onclick="toggleActive(8)">
+            <anim-iron-icon
+              icon="icons:check"
+              animation="anim-1"
+              class="md-36 active"
+            ></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2>Av</h2>
+      <div class="icons-container">
+        <div class="icons-list">
+          <h4>play-arrow</h4>
+          <div class="icons-item" onclick="toggleActive(9)">
+            <anim-iron-icon
+              icon="av:play-arrow"
+              animation="anim-1"
+              class="md-36 active fill-white inner-bg-black"
+            ></anim-iron-icon>
+            <p>
+              anim-1
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

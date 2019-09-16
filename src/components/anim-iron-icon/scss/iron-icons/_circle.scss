@@ -1,0 +1,33 @@
+.circle {
+  .anim-1 {
+    opacity: 0;
+  }
+  .anim-2 {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    stroke-dasharray: 78;
+    stroke-dashoffset: 80;
+  }
+  .anim-3 {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    stroke-dasharray: 78;
+    stroke-dashoffset: 80;
+  }
+}
+
+&.active {
+  .circle {
+    .anim-1 {
+      opacity: 1;
+    }
+    .anim-2 {
+      opacity: 1;
+      stroke-dasharray: 148;
+    }
+    .anim-3 {
+      opacity: 1;
+      stroke-dasharray: 148;
+    }
+  }
+}
